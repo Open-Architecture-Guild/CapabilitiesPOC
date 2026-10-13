@@ -1,0 +1,47 @@
+name: Capability change
+description: Propose a new capability or a change to an existing one.
+title: "Change: "
+body:
+  - type: input
+    id: capability
+    attributes:
+      label: Capability ID
+      description: Leave empty for a new capability. Example, CAP-0021.
+      placeholder: CAP-0021
+  - type: dropdown
+    id: change
+    attributes:
+      label: Type of change
+      options:
+        - Add a capability
+        - Rename
+        - Change the description
+        - Move to another parent
+        - Merge with another capability
+        - Split into several capabilities
+        - Deprecate
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Name and description in the form "The ability to ...". A capability says what the enterprise must be able to do, not how, why or where.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why
+      description: What is missing or wrong today? Name the situation where you needed it.
+    validations:
+      required: true
+  - type: checkboxes
+    id: provenance
+    attributes:
+      label: Provenance
+      options:
+        - label: I wrote this myself, or it comes from a source with an open license that I have named above.
+          required: true
+        - label: I did not copy text or catalogs from TOGAF, BIZBOK or other protected publications.
+          required: true

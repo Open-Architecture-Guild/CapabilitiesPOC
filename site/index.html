@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>OpenCap</title>
+  <meta name="description" content="Offene Capability Map für Architekten. Durchsuchbar, mit Kartenansicht und Permalinks.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#results" data-i18n="skip">Zu den Ergebnissen</a>
+
+  <header>
+    <div class="wrap top-row">
+      <h1 class="brand">
+        <span class="brand-name">OpenCap</span>
+        <span class="brand-sub" data-i18n="tagline"></span>
+      </h1>
+      <div class="top-tools">
+        <fieldset class="seg" id="lang-group">
+          <legend class="vh" data-i18n="langLegend"></legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="lang" value="de"><span>DE</span></label>
+            <label class="chip"><input type="radio" name="lang" value="en"><span>EN</span></label>
+          </div>
+        </fieldset>
+        <button class="link-btn" id="theme" type="button"></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="notice" id="demo-notice" hidden>
+    <div class="wrap"><p><strong data-i18n="demoTitle"></strong> <span data-i18n="demoText"></span></p></div>
+  </div>
+
+  <div class="searchbar">
+    <div class="wrap">
+      <form id="search-form" role="search" autocomplete="off">
+        <label class="vh" for="q" data-i18n="searchLabel"></label>
+        <div class="search-field">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>
+          <input id="q" name="q" type="search" enterkeyhint="search" spellcheck="false" autocapitalize="off" data-i18n-placeholder="placeholder">
+          <div class="search-extras">
+            <span class="kbd" aria-hidden="true">/</span>
+            <button id="clear" type="button" hidden data-i18n-aria="clear">×</button>
+          </div>
+        </div>
+      </form>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <details class="controls-wrap" id="controls" open>
+    <summary class="link-btn" data-i18n="filters"></summary>
+    <div class="controls">
+      <fieldset class="seg">
+        <legend data-i18n="viewLegend"></legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="view" value="map" checked><span data-i18n="viewMap"></span></label>
+          <label class="chip"><input type="radio" name="view" value="list"><span data-i18n="viewList"></span></label>
+        </div>
+      </fieldset>
+      <fieldset class="seg" id="depth-group">
+        <legend data-i18n="depthLegend"></legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="depth" value="1"><span>1</span></label>
+          <label class="chip"><input type="radio" name="depth" value="2" checked><span>2</span></label>
+          <label class="chip"><input type="radio" name="depth" value="3"><span>3</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="seg" id="level-group" hidden>
+        <legend data-i18n="levelLegend"></legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="level" value="all" checked><span data-i18n="all"></span></label>
+          <label class="chip"><input type="radio" name="level" value="1"><span>1</span></label>
+          <label class="chip"><input type="radio" name="level" value="2"><span>2</span></label>
+          <label class="chip"><input type="radio" name="level" value="3+"><span>3+</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="seg">
+        <legend data-i18n="stratumLegend"></legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="stratum" value="all" checked><span data-i18n="all"></span></label>
+          <label class="chip"><input type="radio" name="stratum" value="strategic"><span data-i18n="strategic"></span></label>
+          <label class="chip"><input type="radio" name="stratum" value="core"><span data-i18n="core"></span></label>
+          <label class="chip"><input type="radio" name="stratum" value="supporting"><span data-i18n="supporting"></span></label>
+        </div>
+      </fieldset>
+      <label class="check"><input type="checkbox" id="deprecated"><span data-i18n="showDeprecated"></span></label>
+    </div>
+    </details>
+
+    <div class="layout">
+      <section id="results" aria-labelledby="results-title" tabindex="-1">
+        <h2 class="vh" id="results-title" data-i18n="resultsTitle"></h2>
+        <div id="loading" class="tiny" data-i18n="loading"></div>
+        <div id="empty" hidden></div>
+        <div id="map" class="sheet" hidden></div>
+        <div id="list" hidden></div>
+      </section>
+      <aside id="detail" class="detail is-empty" aria-label="Details"></aside>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-links" id="foot-links"></div>
+      <p data-i18n="legal"></p>
+    </div>
+  </footer>
+
+  <script src="vendor/minisearch.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

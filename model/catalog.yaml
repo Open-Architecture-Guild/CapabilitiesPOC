@@ -1,0 +1,9 @@
+# Catalog metadata. Read by the site build.
+name: OpenCap
+version: 0.1.0
+license: MIT
+# Set automatically from GITHUB_REPOSITORY in CI. Leave empty to hide the GitHub links on the site.
+repository: ""
+branch: main
+# While true, the site shows a notice that the entries are demo content.
+demo: true

@@ -1,0 +1,67 @@
+capabilities:
+  - id: CAP-0040
+    name: Order Fulfillment
+    description: The ability to turn a customer's order into delivered goods or services, and to take them back when needed.
+    parent: null
+    stratum: core
+    status: accepted
+    since: 0.1.0
+    synonyms: [Order Management, Order-to-Delivery]
+    labels:
+      de:
+        name: Auftragsabwicklung
+        description: Die Fähigkeit, die Bestellung eines Kunden in gelieferte Waren oder Leistungen zu verwandeln und sie bei Bedarf zurückzunehmen.
+        synonyms: [Bestellabwicklung, Auftragsmanagement]
+    provenance: { type: original }
+  - id: CAP-0041
+    name: Order Capture
+    description: The ability to accept orders through every channel and check that they are complete and can be met.
+    parent: CAP-0040
+    status: proposed
+    since: 0.1.0
+    synonyms: [Order Entry, Checkout]
+    labels:
+      de:
+        name: Auftragserfassung
+        description: Die Fähigkeit, Bestellungen über alle Kanäle anzunehmen und zu prüfen, ob sie vollständig und erfüllbar sind.
+        synonyms: [Bestellannahme]
+    provenance: { type: original }
+  - id: CAP-0042
+    name: Inventory Allocation
+    description: The ability to reserve stock for orders and to balance supply across locations.
+    parent: CAP-0040
+    status: proposed
+    since: 0.1.0
+    synonyms: [Stock Reservation, Inventory Management]
+    labels:
+      de:
+        name: Bestandszuteilung
+        description: Die Fähigkeit, Ware für Aufträge zu reservieren und den Vorrat zwischen Standorten auszugleichen.
+        synonyms: [Lagerbestandsführung, Bestandsmanagement]
+    provenance: { type: original }
+  - id: CAP-0043
+    name: Delivery Coordination
+    description: The ability to plan, hand over and follow shipments until the recipient has confirmed receipt.
+    parent: CAP-0040
+    status: proposed
+    since: 0.1.0
+    synonyms: [Shipping, Logistics Coordination]
+    labels:
+      de:
+        name: Lieferkoordination
+        description: Die Fähigkeit, Sendungen zu planen, zu übergeben und zu verfolgen, bis der Empfänger den Erhalt bestätigt hat.
+        synonyms: [Versand, Logistiksteuerung]
+    provenance: { type: original }
+  - id: CAP-0044
+    name: Returns Handling
+    description: The ability to accept returned goods, decide what happens to them and settle the account with the customer.
+    parent: CAP-0040
+    status: proposed
+    since: 0.1.0
+    synonyms: [Reverse Logistics, RMA]
+    labels:
+      de:
+        name: Retourenabwicklung
+        description: Die Fähigkeit, zurückgesendete Waren anzunehmen, über ihren Verbleib zu entscheiden und die Rechnung mit dem Kunden auszugleichen.
+        synonyms: [Rücksendungen, Rückgabemanagement]
+    provenance: { type: original }

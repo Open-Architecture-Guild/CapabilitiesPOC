@@ -1,0 +1,69 @@
+# DEMO CONTENT. Placeholder entries written to show how search works.
+# They are not reviewed by curators and will be replaced.
+capabilities:
+  - id: CAP-0001
+    name: Strategy Development
+    description: The ability to set the long-term direction of the enterprise, decide where it competes and express that choice as measurable objectives.
+    parent: null
+    stratum: strategic
+    status: accepted
+    since: 0.1.0
+    synonyms: [Strategic Planning, Corporate Strategy]
+    labels:
+      de:
+        name: Strategieentwicklung
+        description: Die Fähigkeit, die langfristige Ausrichtung des Unternehmens festzulegen, Wettbewerbsfelder zu wählen und diese Wahl in messbare Ziele zu übersetzen.
+        synonyms: [Strategische Planung, Unternehmensstrategie]
+    provenance: { type: original }
+  - id: CAP-0002
+    name: Market Analysis
+    description: The ability to observe customers, competitors and trends and to draw conclusions about opportunities and threats.
+    parent: CAP-0001
+    status: proposed
+    since: 0.1.0
+    synonyms: [Market Research, Competitive Intelligence]
+    labels:
+      de:
+        name: Marktanalyse
+        description: Die Fähigkeit, Kunden, Wettbewerber und Trends zu beobachten und daraus Chancen und Risiken abzuleiten.
+        synonyms: [Marktforschung, Wettbewerbsbeobachtung]
+    provenance: { type: original }
+  - id: CAP-0003
+    name: Objective Setting
+    description: The ability to turn strategic direction into a small set of objectives with owners, targets and review dates.
+    parent: CAP-0001
+    status: proposed
+    since: 0.1.0
+    synonyms: [Goal Setting, OKR Management]
+    labels:
+      de:
+        name: Zielvereinbarung
+        description: Die Fähigkeit, die strategische Richtung in wenige Ziele mit Verantwortlichen, Zielwerten und Prüfterminen zu übersetzen.
+        synonyms: [Zielsetzung]
+    provenance: { type: original }
+  - id: CAP-0004
+    name: Investment Prioritization
+    description: The ability to rank initiatives and investments against strategic objectives and the funding that is available.
+    parent: CAP-0001
+    status: proposed
+    since: 0.1.0
+    synonyms: [Portfolio Prioritization, Funding Allocation]
+    labels:
+      de:
+        name: Investitionspriorisierung
+        description: Die Fähigkeit, Vorhaben und Investitionen nach strategischen Zielen und verfügbarem Budget zu ordnen.
+        synonyms: [Portfolio-Priorisierung]
+    provenance: { type: original }
+  - id: CAP-0005
+    name: Performance Monitoring
+    description: The ability to compare results with objectives and to signal when direction or resources need to change.
+    parent: CAP-0001
+    status: proposed
+    since: 0.1.0
+    synonyms: [KPI Tracking, Balanced Scorecard]
+    labels:
+      de:
+        name: Leistungsüberwachung
+        description: Die Fähigkeit, Ergebnisse mit Zielen zu vergleichen und zu melden, wenn Richtung oder Ressourcen angepasst werden müssen.
+        synonyms: [Kennzahlenverfolgung]
+    provenance: { type: original }

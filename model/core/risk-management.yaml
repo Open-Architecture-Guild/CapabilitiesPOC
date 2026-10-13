@@ -1,0 +1,54 @@
+capabilities:
+  - id: CAP-0010
+    name: Risk Management
+    description: The ability to find, judge and respond to uncertainty that could stop the enterprise from reaching its objectives.
+    parent: null
+    stratum: strategic
+    status: accepted
+    since: 0.1.0
+    synonyms: [Enterprise Risk Management, ERM]
+    labels:
+      de:
+        name: Risikomanagement
+        description: Die Fähigkeit, Unsicherheiten zu erkennen, zu bewerten und darauf zu reagieren, wenn sie das Erreichen der Unternehmensziele gefährden.
+        synonyms: [Unternehmensweites Risikomanagement]
+    provenance: { type: original }
+  - id: CAP-0011
+    name: Risk Assessment
+    description: The ability to estimate how likely a risk is and how much damage it would cause, using a consistent scale.
+    parent: CAP-0010
+    status: proposed
+    since: 0.1.0
+    tags: [regulatory]
+    labels:
+      de:
+        name: Risikobewertung
+        description: Die Fähigkeit, Eintrittswahrscheinlichkeit und Schadenshöhe eines Risikos nach einheitlicher Skala abzuschätzen.
+    provenance: { type: original }
+  - id: CAP-0012
+    name: Compliance Monitoring
+    description: The ability to check that operations follow laws, regulations and internal policies, and to report deviations.
+    parent: CAP-0010
+    status: proposed
+    since: 0.1.0
+    synonyms: [Regulatory Compliance, Policy Enforcement]
+    tags: [regulatory]
+    labels:
+      de:
+        name: Compliance-Überwachung
+        description: Die Fähigkeit, die Einhaltung von Gesetzen, Vorschriften und internen Richtlinien zu prüfen und Abweichungen zu melden.
+        synonyms: [Regelkonformität, Einhaltung von Vorschriften]
+    provenance: { type: original }
+  - id: CAP-0013
+    name: Business Continuity Planning
+    description: The ability to prepare the enterprise to keep critical operations running, or restore them quickly, after a disruption.
+    parent: CAP-0010
+    status: proposed
+    since: 0.1.0
+    synonyms: [Disaster Recovery, Resilience Planning]
+    labels:
+      de:
+        name: Notfallplanung
+        description: Die Fähigkeit, das Unternehmen darauf vorzubereiten, kritische Abläufe nach einer Störung aufrechtzuerhalten oder schnell wiederherzustellen.
+        synonyms: [Betriebskontinuität, Krisenvorsorge]
+    provenance: { type: original }

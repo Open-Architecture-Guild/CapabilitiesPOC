@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opencap.example/schema/capability.schema.json",
+  "title": "Capability",
+  "description": "One business capability in the OpenCap catalog. A capability says what an enterprise must be able to do, not how, why or where.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "description", "parent", "status", "since", "provenance"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^CAP-[0-9]{4,}$",
+      "description": "Opaque, stable identifier. Never reused, never changed when a capability is renamed or moved."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 60,
+      "description": "Business object plus activity, in the language of the business side. Not a department name."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 400,
+      "description": "One or two sentences, phrased as 'The ability to ...'. Must not repeat the name."
+    },
+    "parent": {
+      "type": ["string", "null"],
+      "pattern": "^CAP-[0-9]{4,}$",
+      "description": "ID of the parent capability. null for level 1. The level is derived from the hierarchy."
+    },
+    "stratum": {
+      "enum": ["strategic", "core", "supporting"],
+      "description": "Only on level 1. Lower levels inherit it from their level 1 ancestor."
+    },
+    "status": {
+      "enum": ["proposed", "accepted", "deprecated"]
+    },
+    "since": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Catalog version in which the capability first appeared."
+    },
+    "replaced_by": {
+      "type": ["string", "null"],
+      "pattern": "^CAP-[0-9]{4,}$",
+      "description": "Successor of a deprecated capability."
+    },
+    "deprecation_note": {
+      "type": "string",
+      "maxLength": 300,
+      "description": "Reason for deprecation when there is no single successor."
+    },
+    "synonyms": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 2, "maxLength": 60 },
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "uniqueItems": true
+    },
+    "labels": {
+      "type": "object",
+      "description": "Translations, keyed by BCP 47 language tag. English is the source language.",
+      "propertyNames": { "pattern": "^[a-z]{2}(-[A-Z]{2})?$" },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "description"],
+        "properties": {
+          "name": { "type": "string", "minLength": 3, "maxLength": 60 },
+          "description": { "type": "string", "minLength": 20, "maxLength": 400 },
+          "synonyms": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 2, "maxLength": 60 },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "relations": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Organisation-neutral relations only. Organisation units, functions and processes belong in overlays.",
+      "properties": {
+        "enables_value_streams": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "uses_information": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["original", "open-license"] },
+        "source": { "type": "string", "format": "uri" },
+        "license": { "type": "string", "description": "SPDX identifier of the source's license." }
+      },
+      "if": { "properties": { "type": { "const": "open-license" } } },
+      "then": { "required": ["type", "source", "license"] }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "parent": { "type": "null" } } },
+      "then": { "required": ["stratum"] },
+      "else": { "not": { "required": ["stratum"] } }
+    },
+    {
+      "if": { "properties": { "status": { "const": "deprecated" } } },
+      "then": { "anyOf": [{ "required": ["replaced_by"] }, { "required": ["deprecation_note"] }] }
+    }
+  ]
+}

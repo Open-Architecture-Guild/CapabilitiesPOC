@@ -1,0 +1,67 @@
+capabilities:
+  - id: CAP-0030
+    name: Product Management
+    description: The ability to decide what the enterprise offers, to bring offerings to market and to withdraw them when their time is over.
+    parent: null
+    stratum: core
+    status: accepted
+    since: 0.1.0
+    synonyms: [Product Portfolio Management, Offering Management]
+    labels:
+      de:
+        name: Produktmanagement
+        description: Die Fähigkeit, zu entscheiden, was das Unternehmen anbietet, Angebote an den Markt zu bringen und sie zurückzuziehen, wenn ihre Zeit abgelaufen ist.
+        synonyms: [Produktportfolio, Angebotsmanagement]
+    provenance: { type: original }
+  - id: CAP-0031
+    name: Product Design
+    description: The ability to shape the features, quality and cost of a new or changed product so that it meets a defined need.
+    parent: CAP-0030
+    status: proposed
+    since: 0.1.0
+    synonyms: [Product Development, Service Design]
+    labels:
+      de:
+        name: Produktgestaltung
+        description: Die Fähigkeit, Merkmale, Qualität und Kosten eines neuen oder geänderten Produkts so zu gestalten, dass es einen definierten Bedarf erfüllt.
+        synonyms: [Produktentwicklung]
+    provenance: { type: original }
+  - id: CAP-0032
+    name: Product Catalog Maintenance
+    description: The ability to keep an organised and current list of everything on offer, with the details buyers and sellers need.
+    parent: CAP-0030
+    status: proposed
+    since: 0.1.0
+    synonyms: [Catalog Management, Product Information Management, PIM]
+    labels:
+      de:
+        name: Produktkatalogpflege
+        description: Die Fähigkeit, eine geordnete und aktuelle Liste aller Angebote mit den Angaben zu führen, die Käufer und Verkäufer brauchen.
+        synonyms: [Katalogverwaltung, Produktinformationsmanagement]
+    provenance: { type: original }
+  - id: CAP-0033
+    name: Pricing Determination
+    description: The ability to set and adjust prices and discounts based on cost, demand and market position.
+    parent: CAP-0030
+    status: proposed
+    since: 0.1.0
+    synonyms: [Price Management, Pricing Strategy]
+    labels:
+      de:
+        name: Preisfestlegung
+        description: Die Fähigkeit, Preise und Rabatte anhand von Kosten, Nachfrage und Marktstellung festzulegen und anzupassen.
+        synonyms: [Preisgestaltung, Preismanagement]
+    provenance: { type: original }
+  - id: CAP-0034
+    name: Product Retirement
+    description: The ability to end the sale and support of a product in an orderly way, with a plan for existing customers.
+    parent: CAP-0030
+    status: proposed
+    since: 0.1.0
+    synonyms: [End-of-Life Management, Product Sunset]
+    labels:
+      de:
+        name: Produktauslauf
+        description: Die Fähigkeit, Verkauf und Betreuung eines Produkts geordnet zu beenden und dabei bestehende Kunden zu berücksichtigen.
+        synonyms: [Produkteinstellung]
+    provenance: { type: original }

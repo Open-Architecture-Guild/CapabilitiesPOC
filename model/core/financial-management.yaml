@@ -1,0 +1,68 @@
+capabilities:
+  - id: CAP-0060
+    name: Financial Management
+    description: The ability to fund the enterprise, control how money is spent and account for the result.
+    parent: null
+    stratum: supporting
+    status: accepted
+    since: 0.1.0
+    synonyms: [Finance, Corporate Finance]
+    labels:
+      de:
+        name: Finanzmanagement
+        description: Die Fähigkeit, das Unternehmen zu finanzieren, den Einsatz von Geld zu steuern und über das Ergebnis Rechenschaft abzulegen.
+        synonyms: [Finanzwesen, Unternehmensfinanzierung]
+    provenance: { type: original }
+  - id: CAP-0061
+    name: Budget Control
+    description: The ability to set spending limits, follow actual spending against them and act on overruns.
+    parent: CAP-0060
+    status: proposed
+    since: 0.1.0
+    synonyms: [Budgeting, Cost Control]
+    labels:
+      de:
+        name: Budgetsteuerung
+        description: Die Fähigkeit, Ausgabengrenzen festzulegen, die tatsächlichen Ausgaben dagegen zu verfolgen und bei Überschreitungen einzugreifen.
+        synonyms: [Haushaltsplanung, Kostenkontrolle]
+    provenance: { type: original }
+  - id: CAP-0062
+    name: Payment Processing
+    description: The ability to send and receive money safely and to match each payment to what it is for.
+    parent: CAP-0060
+    status: proposed
+    since: 0.1.0
+    synonyms: [Accounts Payable, Accounts Receivable, Collections]
+    labels:
+      de:
+        name: Zahlungsabwicklung
+        description: Die Fähigkeit, Geld sicher zu senden und zu empfangen und jede Zahlung dem passenden Vorgang zuzuordnen.
+        synonyms: [Zahlungsverkehr, Kreditorenbuchhaltung, Debitorenbuchhaltung]
+    provenance: { type: original }
+  - id: CAP-0063
+    name: Financial Reporting
+    description: The ability to prepare accurate statements of the enterprise's finances for owners, authorities and management.
+    parent: CAP-0060
+    status: proposed
+    since: 0.1.0
+    synonyms: [Accounting, Financial Statements]
+    tags: [regulatory]
+    labels:
+      de:
+        name: Finanzberichterstattung
+        description: Die Fähigkeit, korrekte Aufstellungen der Finanzlage für Eigentümer, Behörden und Führung zu erstellen.
+        synonyms: [Rechnungslegung, Jahresabschluss]
+    provenance: { type: original }
+  - id: CAP-0064
+    name: Treasury Operations
+    description: The ability to keep enough cash available, manage borrowing and limit exposure to currency and interest changes.
+    parent: CAP-0060
+    status: proposed
+    since: 0.1.0
+    synonyms: [Cash Management, Liquidity Management]
+    labels:
+      de:
+        name: Treasury-Betrieb
+        description: Die Fähigkeit, ausreichend Liquidität bereitzuhalten, Kredite zu steuern und Währungs- und Zinsrisiken zu begrenzen.
+        synonyms: [Liquiditätsmanagement, Finanzdisposition]
+    provenance: { type: original }

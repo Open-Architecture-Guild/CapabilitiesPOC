@@ -1,0 +1,95 @@
+capabilities:
+  - id: CAP-0070
+    name: Information Management
+    description: The ability to look after the information the enterprise relies on, from creation to disposal.
+    parent: null
+    stratum: supporting
+    status: accepted
+    since: 0.1.0
+    synonyms: [Data Management, IT Management]
+    labels:
+      de:
+        name: Informationsmanagement
+        description: Die Fähigkeit, die Informationen zu betreuen, auf die das Unternehmen angewiesen ist, von der Entstehung bis zur Löschung.
+        synonyms: [Datenmanagement, Informationsverwaltung]
+    provenance: { type: original }
+  - id: CAP-0071
+    name: Data Governance
+    description: The ability to decide who owns data, which rules apply to it and how those rules are enforced.
+    parent: CAP-0070
+    status: proposed
+    since: 0.1.0
+    synonyms: [Data Stewardship, Data Ownership]
+    labels:
+      de:
+        name: Daten-Governance
+        description: Die Fähigkeit, festzulegen, wem Daten gehören, welche Regeln für sie gelten und wie diese Regeln durchgesetzt werden.
+        synonyms: [Datenverantwortung, Datenhoheit]
+    provenance: { type: original }
+  - id: CAP-0072
+    name: Data Quality Assurance
+    description: The ability to measure whether data is correct, complete and timely, and to have errors fixed at their source.
+    parent: CAP-0071
+    status: proposed
+    since: 0.1.0
+    synonyms: [Data Cleansing, Data Quality Management]
+    labels:
+      de:
+        name: Datenqualitätssicherung
+        description: Die Fähigkeit, zu messen, ob Daten richtig, vollständig und aktuell sind, und Fehler an ihrer Quelle beheben zu lassen.
+        synonyms: [Datenbereinigung, Datenqualität]
+    provenance: { type: original }
+  - id: CAP-0073
+    name: Records Retention
+    description: The ability to keep records for as long as law and business require and to dispose of them afterwards.
+    parent: CAP-0070
+    status: proposed
+    since: 0.1.0
+    synonyms: [Archiving, Records Management]
+    tags: [regulatory]
+    labels:
+      de:
+        name: Aufbewahrungsmanagement
+        description: Die Fähigkeit, Unterlagen so lange aufzubewahren, wie Gesetz und Geschäft es verlangen, und sie danach zu löschen.
+        synonyms: [Archivierung, Aktenführung]
+    provenance: { type: original }
+  - id: CAP-0074
+    name: Information Security Control
+    description: The ability to protect information against unauthorised access, change and loss.
+    parent: CAP-0070
+    status: proposed
+    since: 0.1.0
+    synonyms: [Cybersecurity, Access Control]
+    labels:
+      de:
+        name: Informationssicherheit
+        description: Die Fähigkeit, Informationen vor unbefugtem Zugriff, Veränderung und Verlust zu schützen.
+        synonyms: [Cybersicherheit, Zugriffskontrolle]
+    provenance: { type: original }
+  - id: CAP-0075
+    name: Knowledge Sharing
+    description: The ability to make what people in the enterprise know easy to find and reuse for others.
+    parent: CAP-0070
+    status: proposed
+    since: 0.1.0
+    synonyms: [Knowledge Management, Intranet]
+    labels:
+      de:
+        name: Wissensaustausch
+        description: Die Fähigkeit, das Wissen der Beschäftigten für andere leicht auffindbar und wiederverwendbar zu machen.
+        synonyms: [Wissensmanagement]
+    provenance: { type: original }
+  - id: CAP-0076
+    name: Document Distribution
+    description: The ability to send documents to defined recipients and to keep proof of what was sent.
+    parent: CAP-0070
+    status: deprecated
+    since: 0.1.0
+    replaced_by: CAP-0075
+    deprecation_note: Merged into Knowledge Sharing. Distribution is a way of sharing, not a separate ability. (Demo entry for the deprecated state.)
+    synonyms: [Mail Room]
+    labels:
+      de:
+        name: Dokumentenverteilung
+        description: Die Fähigkeit, Dokumente an festgelegte Empfänger zu senden und nachzuweisen, was gesendet wurde.
+    provenance: { type: original }

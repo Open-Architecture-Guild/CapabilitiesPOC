@@ -1,0 +1,67 @@
+capabilities:
+  - id: CAP-0050
+    name: Workforce Management
+    description: The ability to make sure the enterprise has people with the right skills, in the right numbers, working under clear terms.
+    parent: null
+    stratum: supporting
+    status: accepted
+    since: 0.1.0
+    synonyms: [Human Resources Management, HR]
+    labels:
+      de:
+        name: Personalmanagement
+        description: Die Fähigkeit, sicherzustellen, dass das Unternehmen Menschen mit den passenden Fähigkeiten in der richtigen Zahl und zu klaren Bedingungen beschäftigt.
+        synonyms: [Personalwesen, Human Resources]
+    provenance: { type: original }
+  - id: CAP-0051
+    name: Workforce Planning
+    description: The ability to forecast how many people with which skills the enterprise will need and to plan how to close the gap.
+    parent: CAP-0050
+    status: proposed
+    since: 0.1.0
+    synonyms: [Headcount Planning, Staffing Forecast]
+    labels:
+      de:
+        name: Personalplanung
+        description: Die Fähigkeit, vorauszuberechnen, wie viele Personen mit welchen Fähigkeiten gebraucht werden, und zu planen, wie die Lücke geschlossen wird.
+        synonyms: [Stellenplanung, Personalbedarf]
+    provenance: { type: original }
+  - id: CAP-0052
+    name: Talent Acquisition
+    description: The ability to find, assess and hire people for open positions.
+    parent: CAP-0050
+    status: proposed
+    since: 0.1.0
+    synonyms: [Recruiting, Hiring]
+    labels:
+      de:
+        name: Personalgewinnung
+        description: Die Fähigkeit, Personen für offene Stellen zu finden, zu beurteilen und einzustellen.
+        synonyms: [Recruiting, Personalbeschaffung]
+    provenance: { type: original }
+  - id: CAP-0053
+    name: Skills Development
+    description: The ability to build the knowledge and experience of employees through training, coaching and assignments.
+    parent: CAP-0050
+    status: proposed
+    since: 0.1.0
+    synonyms: [Learning Management, Training]
+    labels:
+      de:
+        name: Kompetenzentwicklung
+        description: Die Fähigkeit, Wissen und Erfahrung der Beschäftigten durch Schulung, Coaching und Aufgaben aufzubauen.
+        synonyms: [Weiterbildung, Personalentwicklung]
+    provenance: { type: original }
+  - id: CAP-0054
+    name: Compensation Administration
+    description: The ability to calculate and pay salaries and benefits correctly and on time under the rules that apply to each employee.
+    parent: CAP-0050
+    status: proposed
+    since: 0.1.0
+    synonyms: [Payroll, Benefits Administration]
+    labels:
+      de:
+        name: Vergütungsabrechnung
+        description: Die Fähigkeit, Gehälter und Zusatzleistungen nach den für jeden Beschäftigten geltenden Regeln richtig und pünktlich zu berechnen und auszuzahlen.
+        synonyms: [Lohnabrechnung, Gehaltsabrechnung]
+    provenance: { type: original }

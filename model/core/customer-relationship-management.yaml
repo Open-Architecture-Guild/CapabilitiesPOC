@@ -1,0 +1,95 @@
+capabilities:
+  - id: CAP-0020
+    name: Customer Relationship Management
+    description: The ability to attract customers, serve them over time and keep a shared view of every interaction with them.
+    parent: null
+    stratum: core
+    status: accepted
+    since: 0.1.0
+    synonyms: [CRM, Customer Management]
+    labels:
+      de:
+        name: Kundenbeziehungsmanagement
+        description: Die Fähigkeit, Kunden zu gewinnen, dauerhaft zu betreuen und alle Kontakte mit ihnen in einer gemeinsamen Sicht zu führen.
+        synonyms: [Kundenverwaltung, Kundenmanagement]
+    provenance: { type: original }
+  - id: CAP-0021
+    name: Customer Onboarding
+    description: The ability to bring a new customer from first agreement to a working relationship, including checks and set-up.
+    parent: CAP-0020
+    status: proposed
+    since: 0.1.0
+    synonyms: [Customer Enrolment, Account Opening]
+    labels:
+      de:
+        name: Kundenaufnahme
+        description: Die Fähigkeit, einen neuen Kunden von der ersten Vereinbarung bis zu einer funktionierenden Beziehung zu führen, einschließlich Prüfungen und Einrichtung.
+        synonyms: [Kundenanlage, Neukundenprozess]
+    provenance: { type: original }
+  - id: CAP-0022
+    name: Identity Verification
+    description: The ability to confirm that a person or organisation is who they claim to be before a relationship starts.
+    parent: CAP-0021
+    status: proposed
+    since: 0.1.0
+    synonyms: [KYC, Know Your Customer]
+    tags: [regulatory]
+    labels:
+      de:
+        name: Identitätsprüfung
+        description: Die Fähigkeit, vor Beginn einer Beziehung zu bestätigen, dass eine Person oder Organisation ist, wer sie vorgibt zu sein.
+        synonyms: [Legitimationsprüfung]
+    provenance: { type: original }
+  - id: CAP-0023
+    name: Consent Capture
+    description: The ability to ask for, record and later honour a customer's permissions for how their data and contact details are used.
+    parent: CAP-0021
+    status: proposed
+    since: 0.1.0
+    synonyms: [Consent Management, Opt-in Management]
+    tags: [regulatory]
+    labels:
+      de:
+        name: Einwilligungserfassung
+        description: Die Fähigkeit, Einwilligungen eines Kunden zur Nutzung seiner Daten und Kontaktwege einzuholen, festzuhalten und später einzuhalten.
+        synonyms: [Einwilligungsverwaltung]
+    provenance: { type: original }
+  - id: CAP-0024
+    name: Customer Service Delivery
+    description: The ability to answer customer requests and resolve their problems through the channels they choose.
+    parent: CAP-0020
+    status: proposed
+    since: 0.1.0
+    synonyms: [Customer Support, Helpdesk]
+    labels:
+      de:
+        name: Kundenservice
+        description: Die Fähigkeit, Anfragen von Kunden zu beantworten und ihre Probleme über die von ihnen gewählten Kanäle zu lösen.
+        synonyms: [Kundensupport, Kundenbetreuung]
+    provenance: { type: original }
+  - id: CAP-0025
+    name: Customer Feedback Analysis
+    description: The ability to collect what customers say about the enterprise and turn it into findings that others can act on.
+    parent: CAP-0020
+    status: proposed
+    since: 0.1.0
+    synonyms: [Voice of the Customer, Satisfaction Measurement]
+    labels:
+      de:
+        name: Kundenfeedback-Auswertung
+        description: Die Fähigkeit, Rückmeldungen von Kunden zu sammeln und in Erkenntnisse zu übersetzen, auf die andere reagieren können.
+        synonyms: [Kundenzufriedenheit]
+    provenance: { type: original }
+  - id: CAP-0026
+    name: Customer Data Stewardship
+    description: The ability to keep customer records accurate, free of duplicates and shared consistently across the enterprise.
+    parent: CAP-0020
+    status: proposed
+    since: 0.1.0
+    synonyms: [Customer Master Data Management]
+    labels:
+      de:
+        name: Kundendatenpflege
+        description: Die Fähigkeit, Kundendatensätze korrekt, dublettenfrei und im ganzen Unternehmen einheitlich bereitzustellen.
+        synonyms: [Kundenstammdaten]
+    provenance: { type: original }
